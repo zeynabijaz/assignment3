@@ -18,13 +18,18 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin' # Specify the required Java distribution
+        distribution: 'temurin'
 
     - name: Navigate to Project Directory
-      run: cd Assignment2 # Ensure the directory path is correct
+      run: cd Assignment2
 
     - name: Install Dependencies
-      run: mvn install
+      run: |
+        cd Assignment2
+        mvn install
 
     - name: Run Tests
-      run: mvn test
+      run: |
+        cd Assignment2
+        mvn test
+
