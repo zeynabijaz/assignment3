@@ -18,10 +18,12 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin' # Specify the Java distribution
+        distribution: 'temurin' # Required field to specify the Java distribution
+        cache: 'maven'         # Optional, enables dependency caching for Maven
 
     - name: Install Dependencies
       run: mvn install # Replace with your dependency installation command if not using Maven
 
     - name: Run Tests
       run: mvn test # Replace with your command for running tests
+
