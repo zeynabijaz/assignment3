@@ -18,6 +18,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'temurin' # Specify the Java distribution
 
     - name: Install Dependencies
       run: mvn install # Replace with your dependency installation command if not using Maven
